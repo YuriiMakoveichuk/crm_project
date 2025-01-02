@@ -7,10 +7,12 @@ export interface PageProps {
     params: { id: string };
 }
 
-export default function Page({ params }: PageProps) {
+const Page: React.FC<PageProps> = ({ params }) => {
     return (
         <div className="py-6 px-10">
             <PromotionForm companyId={params.id} />
         </div>
     );
 }
+
+export default Page;
